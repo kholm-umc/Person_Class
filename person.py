@@ -3,15 +3,15 @@
 # The Person class
 #
 # Properties
-#  Age: getAge(), setAge()
-#  Job: getJob(), setJob()
-#  Name: getName(), setName()
-#  Rate: getRate()
-#  Days: getDays() # Days available
+#  Age: getage(), setage()
+#  Job: getjob(), setjob()
+#  Name: getname(), setname()
+#  Rate: getrate()
+#  Days: getdays()
 #
 # Methods
-#  calculateCharge(hours)
-#  updateRate(rate)
+#  calculatecharge(hours)
+#  updaterate(rate)
 #
 
 
@@ -25,6 +25,7 @@ class Person:
 
     __days = ["Monday", "Tuesday", "Friday", "Saturday"]
 
+    ####################
     # Class instantiator
     def __init__(self,
                  name="",
@@ -32,15 +33,16 @@ class Person:
                  job=""):
 
         # Set all our properties
-        self.setName(name)
-        self.setAge(age)
-        self.setJob(job)
+        self.setname(name)
+        self.setage(age)
+        self.setjob(job)
 
+    #########################################
     # Getter and setter for the name property
-    def getName(self):
-        return (self.__name)
+    def getname(self):
+        return self.__name
 
-    def setName(self, name):
+    def setname(self, name):
         try:
             if name:
                 self.__name = name
@@ -48,11 +50,12 @@ class Person:
         except Exception as e:
             raise e
 
+    ########################################
     # Getter and setter for the age property
-    def getAge(self):
-        return (self.__age)
+    def getage(self):
+        return self.__age
 
-    def setAge(self, age):
+    def setage(self, age):
         try:
             age = int(age)
         except Exception as e:
@@ -62,29 +65,33 @@ class Person:
             if age:
                 self.__age = age
 
-        except Exception:
+        except Exception as e:
             raise e
 
-    # Getter and setter for the age property
-    def getRate(self):
-        return (self.__rate)
+    #############################
+    # Getter for the age property
+    def getrate(self):
+        return self.__rate
 
+    ########################################
     # Getter and setter for the job property
-    def getJob(self):
-        return (self.__job)
+    def getjob(self):
+        return self.__job
 
-    def setJob(self, job):
+    def setjob(self, job):
         try:
             if job:
                 self.__job = job
+
         except Exception as e:
             raise e
 
     #############
     # Update Rate
-    def updateRate(self, rate):
+    def updaterate(self, rate):
         try:
             rate = float(rate)
+
         except Exception as e:
             raise e
 
@@ -92,22 +99,19 @@ class Person:
             if rate:
                 self.__rate = rate
 
-        except Exception:
+        except Exception as e:
             raise e
 
     ##########
     # Get Days
-    def getDays(self):
-        return (self.__days)
+    def getdays(self):
+        return self.__days
 
     ###################
     # Calculate Charges
-    def calculateCharge(self, hours=0):
+    def calculatecharge(self, hours=0):
         try:
-            hours = float(hours)
-            return hours * self.getRate()
+            return float(hours) * self.getrate()
 
         except Exception as e:
             raise e
-
-

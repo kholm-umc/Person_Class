@@ -10,34 +10,34 @@ from person import Person
 try:
     # Alex
     alex = Person("Alex", 10, "Lawn Care Tech")
-    alex.updateRate(15.00)
+    alex.updaterate(15.00)
 
     # Hannah
     hannah = Person("Hannah", 13, "Baker")
-    hannah.updateRate(40.00)
+    hannah.updaterate(40.00)
 
     hours = 10
 
-    print(f"My name is {alex.getName()}")
-    print(f"My age is {alex.getAge()}")
-    print(f"My job is {alex.getJob()}")
-    print(f"I am available on {', '.join(alex.getDays())}")
-    print(f"For {int(hours):#.2f} hours @ a rate of ${alex.getRate():#.2f} per hour, the total is ${alex.calculateCharge(hours):#.2f}")
+    print(f"My name is {alex.getname()}")
+    print(f"My age is {alex.getage()}")
+    print(f"My job is {alex.getjob()}")
+    print(f"I am available on {', '.join(alex.getdays())}")
+    print(f"For {int(hours):#.2f} hours @ a rate of ${alex.getrate():#.2f} per hour, the total is ${alex.calculatecharge(hours):#.2f}")
     input("Press [ENTER] to continue ")
     print()
 
     # Increase the rate
-    alex.updateRate(float(input("What is the new rate? ")))
+    alex.updaterate(float(input("What is the new rate? ")))
 
     # Update the number of hours
     hours = input("How many hours? ")
 
-    print(f"My new Rate is {alex.getRate():#.2f}")
-    print(f"For {int(hours):#.2f} hours @ a rate of ${alex.getRate():#.2f} per hour, the total is ${alex.calculateCharge(hours):#.2f}")
+    print(f"My new Rate is {alex.getrate():#.2f}")
+    print(f"For {int(hours):#.2f} hours @ a rate of ${alex.getrate():#.2f} per hour, the total is ${alex.calculatecharge(hours):#.2f}")
     input("Press [ENTER] to continue ")
     print()
 
-    print(f"My name is {hannah.getName()}.  My rate is ${hannah.getRate():#.2f}")
+    print(f"My name is {hannah.getname()}.  My rate is ${hannah.getrate():#.2f} and I am a {hannah.getjob()}.")
     input("Press [ENTER] to continue ")
     print()
 
