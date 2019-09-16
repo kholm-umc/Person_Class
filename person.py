@@ -17,11 +17,11 @@
 
 class Person:
     # Private properties
-    __age = 0
-    __rate = 10.0
+    __age: int = 0
+    __rate: float = 10.0
 
-    __job = ""
-    __name = ""
+    __job: str = ""
+    __name: str = ""
 
     __days = ["Monday", "Tuesday", "Friday", "Saturday"]
 
@@ -39,10 +39,10 @@ class Person:
 
     #########################################
     # Getter and setter for the name property
-    def getname(self):
+    def getname(self) -> str:
         return self.__name
 
-    def setname(self, name):
+    def setname(self, name: str) -> None:
         try:
             if name:
                 self.__name = name
@@ -52,10 +52,10 @@ class Person:
 
     ########################################
     # Getter and setter for the age property
-    def getage(self):
+    def getage(self) -> int:
         return self.__age
 
-    def setage(self, age):
+    def setage(self, age: int) -> None:
         try:
             age = int(age)
         except Exception as e:
@@ -70,15 +70,15 @@ class Person:
 
     #############################
     # Getter for the age property
-    def getrate(self):
+    def getrate(self) -> float:
         return self.__rate
 
     ########################################
     # Getter and setter for the job property
-    def getjob(self):
+    def getjob(self) -> str:
         return self.__job
 
-    def setjob(self, job):
+    def setjob(self, job: str) -> None:
         try:
             if job:
                 self.__job = job
@@ -88,7 +88,7 @@ class Person:
 
     #############
     # Update Rate
-    def updaterate(self, rate):
+    def updaterate(self, rate: float) -> None:
         try:
             rate = float(rate)
 
@@ -104,12 +104,12 @@ class Person:
 
     ##########
     # Get Days
-    def getdays(self):
+    def getdays(self) -> list:
         return self.__days
 
     ###################
     # Calculate Charges
-    def calculatecharge(self, hours=0):
+    def calculatecharge(self, hours: int = 0) -> float:
         try:
             return float(hours) * self.getrate()
 
