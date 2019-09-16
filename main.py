@@ -1,5 +1,6 @@
 # Ken Holm
 # Purpose: Introduction the Object Oriented Programming
+#  See https://docs.python.org/3/tutorial/classes.html
 
 # Import our person class
 from person import Person
