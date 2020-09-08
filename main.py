@@ -11,36 +11,41 @@ from person import Person
 try:
     # Alex
     alex = Person("Alex", 10, "Lawn Care Tech")
-    alex.updaterate(15.00)
+    alex.updateRate(15.00)
 
     # Hannah
-    hannah = Person("Hannah", 13, "Baker")
-    hannah.updaterate(40.00)
+    hannah = Person()
+    hannah.setName("Hannah")
+    hannah.setAge(14)
+    hannah.setJob("Baker")
+    hannah.updateRate(40.00)
 
     hours = 10
 
-    print(f"My name is {alex.getname()}")
-    print(f"My age is {alex.getage()}")
-    print(f"My job is {alex.getjob()}")
-    print(f"I am available on {', '.join(alex.getdays())}")
-    print(f"For {int(hours):#.2f} hours @ a rate of ${alex.getrate():#.2f} per hour, the total is ${alex.calculatecharge(hours):#.2f}")
+    print(f"My name is {alex.getName()}")
+    print(f"My age is {alex.getAge()}")
+    print(f"My job is {alex.getJob()}")
+    print(f"I am available on {', '.join(alex.getDays())}")
+    print(f"For {int(hours):#.2f} hours @ a rate of ${alex.getRate():#.2f} per hour, the total is ${alex.calculateCharge(hours):#.2f}")
     input("Press [ENTER] to continue ")
     print()
 
     # Increase the rate
-    alex.updaterate(float(input("What is the new rate? ")))
+    alex.updateRate(float(input("What is the new rate? ")))
 
     # Update the number of hours
     hours = input("How many hours? ")
 
-    print(f"My new Rate is {alex.getrate():#.2f}")
-    print(f"For {int(hours):#.2f} hours @ a rate of ${alex.getrate():#.2f} per hour, the total is ${alex.calculatecharge(hours):#.2f}")
+    print(f"My new Rate is {alex.getRate():#.2f}")
+    print(f"For {int(hours):#.2f} hours @ a rate of ${alex.getRate():#.2f} per hour, the total is ${alex.calculateCharge(hours):#.2f}")
     input("Press [ENTER] to continue ")
     print()
 
-    print(f"My name is {hannah.getname()}.  My rate is ${hannah.getrate():#.2f} and I am a {hannah.getjob()}.")
+    print(f"My name is {hannah.getName()}.  My rate is ${hannah.getRate():#.2f} and I am a {hannah.getAge()} year old {hannah.getJob()}.")
     input("Press [ENTER] to continue ")
     print()
+
+    print(hannah.__name)
 
 except Exception as e:
     print(f"Got an error: {e}")

@@ -3,15 +3,15 @@
 # The Person class
 #
 # Properties
-#  Age: getage(), setage()
-#  Job: getjob(), setjob()
-#  Name: getname(), setname()
-#  Rate: getrate()
-#  Days: getdays()
+#  Age: getAge(), setAge()
+#  Job: getJob(), setJob()
+#  Name: getName(), setName()
+#  Rate: getRate()
+#  Days: getDays()
 #
 # Methods
-#  calculatecharge(hours)
-#  updaterate(rate)
+#  calculateCharge(hours)
+#  updateRate(rate)
 #
 
 
@@ -25,24 +25,24 @@ class Person:
 
     __days = ["Monday", "Tuesday", "Friday", "Saturday"]
 
-    ####################
-    # Class instantiator
+    ##################################
+    # Instantiate a copy of this class
     def __init__(self,
                  name="",
                  age=0,
                  job=""):
 
         # Set all our properties
-        self.setname(name)
-        self.setage(age)
-        self.setjob(job)
+        self.setName(name)
+        self.setAge(age)
+        self.setJob(job)
 
     #########################################
     # Getter and setter for the name property
-    def getname(self) -> str:
+    def getName(self) -> str:
         return self.__name
 
-    def setname(self, name: str) -> None:
+    def setName(self, name: str) -> None:
         try:
             if name:
                 self.__name = name
@@ -52,10 +52,10 @@ class Person:
 
     ########################################
     # Getter and setter for the age property
-    def getage(self) -> int:
+    def getAge(self) -> int:
         return self.__age
 
-    def setage(self, age: int) -> None:
+    def setAge(self, age: int) -> None:
         try:
             age = int(age)
         except Exception as e:
@@ -70,15 +70,15 @@ class Person:
 
     #############################
     # Getter for the age property
-    def getrate(self) -> float:
+    def getRate(self) -> float:
         return self.__rate
 
     ########################################
     # Getter and setter for the job property
-    def getjob(self) -> str:
+    def getJob(self) -> str:
         return self.__job
 
-    def setjob(self, job: str) -> None:
+    def setJob(self, job: str) -> None:
         try:
             if job:
                 self.__job = job
@@ -88,7 +88,7 @@ class Person:
 
     #############
     # Update Rate
-    def updaterate(self, rate: float) -> None:
+    def updateRate(self, rate: float) -> None:
         try:
             rate = float(rate)
 
@@ -104,14 +104,14 @@ class Person:
 
     ##########
     # Get Days
-    def getdays(self) -> list:
+    def getDays(self) -> list:
         return self.__days
 
     ###################
     # Calculate Charges
-    def calculatecharge(self, hours: int = 0) -> float:
+    def calculateCharge(self, hours: int = 0) -> float:
         try:
-            return float(hours) * self.getrate()
+            return float(hours) * self.getRate()
 
         except Exception as e:
             raise e
