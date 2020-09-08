@@ -47,7 +47,5 @@ try:
     input("Press [ENTER] to continue ")
     print()
 
-    print(hannah.__name)
-
 except Exception as e:
     print(f"Got an error: {e}")
