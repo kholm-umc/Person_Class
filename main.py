@@ -14,6 +14,8 @@ try:
     alex.updateRate(15.00)
 
     # Hannah
+    # Now, instantiating a Person object with no information initially.
+    #  Then adding that information after the object has been created.
     hannah = Person()
     hannah.setName("Hannah")
     hannah.setAge(14)
