@@ -10,7 +10,7 @@ from person import Person
 ###############################################
 try:
     # Alex
-    alex = Person("Alex", 10, "Lawn Care Tech")
+    alex = Person("Alex", 12, "Lawn Care Tech")
     alex.updateRate(15.00)
 
     # Hannah
@@ -18,7 +18,7 @@ try:
     #  Then adding that information after the object has been created.
     hannah = Person()
     hannah.setName("Hannah")
-    hannah.setAge(14)
+    hannah.setAge(15)
     hannah.setJob("Baker")
     hannah.updateRate(40.00)
 
