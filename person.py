@@ -14,7 +14,6 @@
 #  updateRate(rate)
 #
 
-
 class Person:
     # Private properties
     __age: int = 0
